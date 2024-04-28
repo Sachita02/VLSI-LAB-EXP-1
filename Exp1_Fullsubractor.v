@@ -1,17 +1,17 @@
-module fa_ha(a,b,c,sum,carry);
-input a,b,c;
-output sum,carry;
+module fs(a,b,bin,d,bout);
+input a,b,bin;
+output d,bout;
 
 
 
-
-module fa (a,b,c,sum, carry); 
+endmodule
+module fs(a,b,c,diff,borrow); 
 input a,b,c; 
-output sum, carry; 
+output diff, borrow; 
 wire w1,w2,w3; 
-xor gl(wl,a,b); 
-xor g2 (w2,a,b); 
-xor g3 (sum, w1,c); 
-and (w3,c,w1); 
-or g5 (carry, w3,w2); 
+xor gl (wl,a,b); 
+and g2 (w2,~a,b); 
+xor g3 (diff,wl,c); 
+and (w3,c,~wl);  
+or g5 (borrow,w3,w2); 
 endmodule
