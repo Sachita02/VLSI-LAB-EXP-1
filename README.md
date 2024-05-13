@@ -2,15 +2,29 @@
 ## AIM: 
 To simulate and synthesis Logic Gates, Adders and Subtractor using VIVADO
 
-## APPARATUS REQUIRED: VIVADO 2023.2
+## APPARATUS REQUIRED:
+
+VIVADO 2023.2
 
 ## PROCEDURE:
- STEP:1 Start the Vivado, Select and Name the New project.<br>
- STEP:2 Select the device family, device, package and speed. <br>
-STEP:3 Select new source in the New Project and select Verilog Module as the Source type.<br>
-STEP:4 Type the File Name and Click Next and then finish button. Type the code and save it.<br>
-STEP:5 Select the Behavioural Simulation in the Source Window and click the check syntax.<br>
-STEP:6 Click the simulation to simulate the program and give the inputs and verify the outputs as per the truth table.
+
+### STEP:1
+Start the Vivado, Select and Name the New project.<br>
+
+### STEP:2
+Select the device family, device, package and speed. <br>
+
+### STEP:3
+Select new source in the New Project and select Verilog Module as the Source type.<br>
+
+### STEP:4
+Type the File Name and Click Next and then finish button. Type the code and save it.<br>
+
+### STEP:5
+Select the Behavioural Simulation in the Source Window and click the check syntax.<br>
+
+### STEP:6
+Click the simulation to simulate the program and give the inputs and verify the outputs as per the truth table.
 
 ## LOGIC-GATES:
 
@@ -21,6 +35,7 @@ STEP:6 Click the simulation to simulate the program and give the inputs and veri
 
 
 ## PROGRAM:
+```
 module fs(a,b,c0,c1,c2,c3,c4,c5,c6);<br>
 input a,b;<br>
 output co,c1,c2,c3,c4,c5,c6;<br>
@@ -32,7 +47,7 @@ nor g5 (c4,a,b);<br>
 not g6(c5,a);<br>
 xnor g7 (c6,a,b);<br>
 endmodule
-
+```
 
 ## OUTPUT: 
 
@@ -41,22 +56,17 @@ endmodule
 
 ## HALF ADDER:
 
-
-
-
 ![image](https://github.com/Sachita02/VLSI-LAB-EXP-1/assets/162723490/de0676e2-b1d0-4971-8495-4f635430b9b8)
 
 
-
-
-
 ## PROGRAM:
+```
 module ha (a,b,s,c);<br>
 input a,b;<br>
 output s,c;<br>
 xor g1(s,a,b); O and g2 (c,a,b);<br>
 endmodule
-
+```
 ## OUTPUT:
 ![image](https://github.com/Sachita02/VLSI-LAB-EXP-1/assets/162723490/3275efb9-cdf6-4c08-a664-d59012a6f962)
 
@@ -67,13 +77,14 @@ endmodule
 
 
 ## PROGRAM:
+```
 module hs (a, b, diff, borr);<br>
 input a,b;<br>
 output diff, borr;<br>
 xor gl (diff,a,borr); <br>
 and g2 (borr, -a,b);<br>
 endmodule
-
+```
 ## OUTPUT:
 
 
@@ -96,6 +107,7 @@ endmodule
 
 
 ## PROGRAM:
+```
 module fa (a,b,c,sum, carry);<br>
 input a,b,c;<br>
 output sum, carry;<br>
@@ -106,7 +118,7 @@ xor g3 (sum, w1,c);<br>
 and (w3,c,w1);<br>
 or g5 (carry, w3,w2);<br>
 endmodule
-
+```
 ## OUTPUT:
 
 ![image](https://github.com/Sachita02/VLSI-LAB-EXP-1/assets/162723490/ec22d9d0-87e1-40e7-b51d-e331834fc20f)
@@ -121,6 +133,7 @@ endmodule
 
 
 ## PROGRAM:
+```
 module fs(a,b,c,diff,borrow);<br>
 input a,b,c;<br>
 output diff, borrow;<br>
@@ -131,7 +144,7 @@ xor g3 (diff,wl,c);<br>
 and (w3,c,~wl); <br>
 or g5 (borrow,w3,w2);<br>
 endmodule
-
+```
 ## OUTPUT:
 
 ![image](https://github.com/Sachita02/VLSI-LAB-EXP-1/assets/162723490/693c813d-d441-4548-9ca2-1c8f82631cbe)
@@ -146,6 +159,7 @@ endmodule
 
 
 ## PROGRAM:
+```
 module FA(a, b, c, sum, carry);<br>
 input a, b, c;<br>
 output sum, carry;<br>
@@ -168,7 +182,7 @@ FA f6(a[5], b[5], w[4], sum[5], w[5]);<br>
 FA f7(a[6], b[6], w[5], sum[6], w[6]);<br>
 FA f8(a[7], b[7], w[6], sum[7], carry);<br>
 endmodule
-
+```
 
 ## OUTPUT:
 
